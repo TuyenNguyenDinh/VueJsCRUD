@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop A-Z</title>
+    <link rel="stylesheet" href="./src/assets/css/frontend/bootstrap.min.frontend.css">
+    <link rel="stylesheet" href="./src/assets/css/frontend/home.css">
+    <link rel="stylesheet" href="./src/assets/css/frontend/footer.css">
+    <link rel="stylesheet" href="./src/assets/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script type="text/javascript" src="./src/assets/js/frontend/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script type="text/javascript" src="./src/assets/js/frontend/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(function() {
+            var pull = $('#pull');
+            menu = $('nav ul');
+            menuHeight = menu.height();
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+        });
+
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backtotop").style.display = "block";
+            } else {
+                document.getElementById("backtotop").style.display = "none";
+            }
+        }
+
+
+        function topFunction() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+
+<body class="preload">
+    <div id="container">
+        <header>
+            <nav id="navbar-header">
+                <div class="header">
+                    <div class="hidden-sm hidden-xs header">
+                        <div class="head-main backgound-primary">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="line">
+                                            <div class="logo col-logo">
+                                                <a href="#">
+                                                    <img src="./src/assets/image/logo.png" alt="shopA_Z" height="38px" width="144px">
+                                                </a>
+                                            </div>
+                                            <div class="col-nav nav-menu">
+                                                <button class="dropbtn btn btn-secondary" type="buttom">
+                                                    <i class="fas fa-bars"></i>
+                                                    Danh mục
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    <a href="#">TV</a>
+                                                    <a href="#">Loa Karaoke</a>
+                                                    <a href="#">Tủ lạnh</a>
+                                                    <a href="#">Điều hòa</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="search">
+                                            <form action="#" role="search" method="GET" class="full-width">
+                                                <!-- Search form -->
+                                                <input class="form-control" type="text" name="result" placeholder="Nhập từ khóa..." aria-label="Search">
+                                                <button type="submit" class="color-b9 font-size-18">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <!-- cart -->
+                                        <a class="display" href="#">
+                                            <img src="./src/assets/image/icon-cart.png" height="38px" width="38px" style="margin-left: 40px">
+                                            <a style="color: white;">0</a>
+                                        </a>
+                                        <!-- cart -->
+                                        <div class="header-account main_account pull-right">
+                                            <a href="#" class="btn-sign">Đăng nhập</a>
+                                            <a href="#" class="btn btn-login btn-secondary">Đăng ký</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Mobile -->
+
+            <nav id="navbar-header-mobile">
+                <div class="navbar navbar-dark header-mobile">
+                    <div class="header-preload">
+                        <button class="header__button" id="btnNav" type="button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                    <nav class="nav">
+                        <div class="nav__links">
+
+                            <a href="#" class="nav__link">
+                                Loa Karaoke
+                            </a>
+                            <a href="#" class="nav__link">
+                                Tủ lạnh
+                            </a>
+                            <a href="#" class="nav__link">
+                                Điều hòa
+                            </a>
+                        </div>
+                        <div class="nav__overlay"></div>
+                    </nav>
+                    <div class="header-mobile-logo">
+                        <a href="#">
+                            <img src="./src/assets/image/logo.png" alt="shopA_Z" height="38px" width="144px">
+                        </a>
+                    </div>
+                    <div class="header-preload1">
+                        <nav class="nav1">
+                            <div class="nav__links1">
+                                <a href="#" class="nav__link1">Đăng nhập</a>
+                                <a href="#" class="nav__link1" style="border-top: 1px solid ;">Đăng
+                                    ký</a>
+                            </div>
+                            <div class="nav__overlay1"></div>
+                        </nav>
+                        <button class="header__button1" id="btnNav1" type="button">
+                            <a class="header-mobile__right_btn" style="color: white;">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="header-mobile-search">
+                    <div class="col-md-12">
+                        <form action="#" method="GET" class="full-width">
+                            <!-- Search form -->
+                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                            <button type="submit" class="color-b9 font-size-18">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <section id="body">
+            <div class="container">
+                <div class="row">
+                    <!-- Main -->
+                    <div id="main" class="col-lg-9 col-md-12 col-sm-12">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="./src/assets/image/slide-1.png" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="./src/assets/image/slide-2.png" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="./src/assets/image/slide-3.png" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span> -->
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span> -->
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="product-feature">
+                            <div class="product-feature_item">
+                                <div class="item-img pull-left">
+                                    <a href="">
+                                        <img src="./src/assets/upload/1592969208_569026_ff88983e81a92e443a413a74b6e8eb7b.jpg" alt="" style="height: 70px; width: 50px;">
+                                    </a>
+                                </div>
+                                <div class="item-content pull-right">
+                                    <h3 class="item">
+                                        <a href="#">Android Tivi Sony 4K 43 inch KD-43X8000G</a>
+                                    </h3>
+                                    <div class="product-feature_price">
+                                        <span>9.600.000 đ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wrap-inner">
+                        <div class="products">
+                            <div class="products-tab hidden-xs display-flex-center content-space-between">
+                                <ul class="nav nav-pills" style="padding-bottom: 12px;">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#hot-products" data-toggle="tab">Sản phẩm nổi
+                                            bật</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#new-products" data-toggle="tab">Sản phẩm mới</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="products-tab-content">
+                                <div id="hot-products" class="tab-pane container fade active in">
+                                    <h3>Sản phẩm nổi bật</h3>
+                                    <div class="product-list row">
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592969208_569026_ff88983e81a92e443a413a74b6e8eb7b.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Android Tivi Sony 4K 43 inch KD-43X8000G</a></p>
+                                            <p class="price">9.600.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592969208_569026_ff88983e81a92e443a413a74b6e8eb7b.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Android Tivi Sony 4K 43 inch KD-43X8000G</a></p>
+                                            <p class="price">9.600.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592969208_569026_ff88983e81a92e443a413a74b6e8eb7b.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Android Tivi Sony 4K 43 inch KD-43X8000G</a></p>
+                                            <p class="price">9.600.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="new-products" class="tab-pane container fade">
+                                    <h3>sản phẩm mới</h3>
+                                    <div class="product-list row">
+
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592970808_4845069_027b5080e85cb94e64ff596de893a381.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Điều hòa Toshiba Inverter 9000 BTU RAS</a></p>
+                                            <p class="price">9.190.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592970808_4845069_027b5080e85cb94e64ff596de893a381.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Điều hòa Toshiba Inverter 9000 BTU RAS</a></p>
+                                            <p class="price">9.190.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                        <div class="product-item col-md-3 col-sm-6 col-xs-12">
+                                            <a href="#"><img src="./src/assets/upload/1592970808_4845069_027b5080e85cb94e64ff596de893a381.jpg" style="height: 100px;" class="img-thumbnail"></a>
+                                            <p><a href="#">Điều hòa Toshiba Inverter 9000 BTU RAS</a></p>
+                                            <p class="price">9.190.000₫</p>
+                                            <div class="marsk">
+                                                <a href="#">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Main -->
+                    </div>
+                </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About us</h6>
+                        <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers
+                            build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">TV</a></li>
+                            <li><a href="#">Loa Karaoke</a></li>
+                            <li><a href="#">Tủ lạnh</a></li>
+                            <li><a href="#">Điều hòa</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Contribute</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                            <a href="#">Nguyễn Đình Tuyên</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fab fa-facebook-square"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fab fa-dribbble-square"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <button onclick="topFunction()" id="backtotop" title="Go to top" class="btn"><i
+                            class="fa fa-arrow-up"></i></button>
+                </div>
+            </div>
+        </footer>
+        </div>
+</body>
+
+<script>
+    window.addEventListener("load", () => {
+        document.body.classList.remove("preload");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector(".nav1");
+
+        document.querySelector("#btnNav1").addEventListener("click", () => {
+            nav.classList.add("nav--open1");
+        });
+
+        document.querySelector(".nav__overlay1").addEventListener("click", () => {
+            nav.classList.remove("nav--open1");
+        });
+    });
+</script>
+<script>
+    window.addEventListener("load", () => {
+        document.body.classList.remove("preload");
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector(".nav");
+
+        document.querySelector("#btnNav").addEventListener("click", () => {
+            nav.classList.add("nav--open");
+        });
+
+        document.querySelector(".nav__overlay").addEventListener("click", () => {
+            nav.classList.remove("nav--open");
+        });
+    });
+</script>
+
+
+
+
+</html>
